@@ -1,7 +1,13 @@
 #!/bin/sh
 echo '正在安装依赖'
-yum install unzip wget -y > /dev/null
-apt-get install unzip wget -y > /dev/null
+if cat /etc/os-release | grep "centos"
+    then
+    yum install unzip wget -y > /dev/null
+    yum update curl -y
+else
+    apt-get install unzip wget -y > /dev/null
+    apt-get update curl -y
+fi
 
 api=$1
 key=$2
