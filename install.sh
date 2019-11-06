@@ -15,7 +15,7 @@ nodeId=$3
 localPort=$4
 license=$5
 
-kill -9 $(ps -ef | grep $key | grep -v grep | grep -v curl | awk '{print $2}') 1 > /dev/null
+kill -9 $(ps -ef | grep $key | grep -v grep | grep -v install.sh | awk '{print $2}') 1 > /dev/null
 kill -9 $(ps -ef | grep defunct | grep -v grep | awk '{print $2}') 1 > /dev/null
 echo '结束进程'
 rm -rf $key
