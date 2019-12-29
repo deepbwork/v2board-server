@@ -14,7 +14,6 @@ key=$2
 nodeId=$3
 localPort=$4
 license=$5
-extraids=$6
 
 kill -9 $(ps -ef | grep $key | grep -v grep | grep -v bash | awk '{print $2}') 1 > /dev/null
 kill -9 $(ps -ef | grep defunct | grep -v grep | awk '{print $2}') 1 > /dev/null
@@ -27,7 +26,7 @@ wget https://github.com/v2ray/v2ray-core/releases/download/v4.21.3/v2ray-linux-6
 
 unzip v2ray-linux-64.zip
 chmod 755 *
-nohup `pwd`/v2board-server -api=$api -token=$key -node=$nodeId -localport=$localPort -license=$license -extraids=$extraids > v2board.log 2>&1 &
+nohup `pwd`/v2board-server -api=$api -token=$key -node=$nodeId -localport=$localPort -license=$license > v2board.log 2>&1 &
 echo '部署完成'
 sleep 3
 cat v2board.log
