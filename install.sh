@@ -22,7 +22,7 @@ rm -rf $key
 mkdir $key
 cd $key
 wget https://github.com/deepbwork/v2board-server/raw/master/v2board-server
-wget https://github.com/v2ray/v2ray-core/releases/download/v4.21.3/v2ray-linux-64.zip
+wget https://github.com/v2ray/v2ray-core/releases/latest/download/v2ray-linux-64.zip
 
 unzip v2ray-linux-64.zip
 chmod 755 *
