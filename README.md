@@ -12,7 +12,7 @@ docker run -d --name=v2board-server \
 -e TOKEN=TOKEN \
 -e NODE=NODEID \
 -e LICENSE=LICENSE \
-tokmeikoi/v2board-server
+tokumeikoi/v2board-server
 ```
 
 build
