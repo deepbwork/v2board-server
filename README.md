@@ -14,3 +14,9 @@ docker run -d --name=v2board-server \
 -e LICENSE=LICENSE \
 tokmeikoi/v2board-server
 ```
+
+build
+```
+https://github.com/deepbwork/v2board-server.git
+docker build ./v2board-server
+```
